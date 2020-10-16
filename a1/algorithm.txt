@@ -1,0 +1,35 @@
+Assignment 1 algorithm Checkpoin 1 - Mitchell Lo
+
+
+
+Description of how the main program works:
+
+Step 1: Using the if statement to check if the user has entered 2 inputs, if not, display a usage message and exit the program.
+
+Step 2: Creating variables for all the months in the year and the number of days in each month. Allow user to assign and input into the variable user_raw_data.
+
+Step 3: Extracting the user input data into year, month, and day format after sanitizing.
+
+Step 4: Checks if the extracted dob has 8 digits, if the result is false, it will print an error message and exit the program.
+
+Step 5: Indicates which part of the dob is year, month and day.
+
+Step 6: Check if the year, month and days are of valid range of numbers. If any of the datas are found to be false, the program will output an error and exit.
+
+Step 7: Converts the numeric version of dob to string.
+
+Step 8: Prints the output of your string version of dob.
+
+
+
+Functions of the program:
+
+leap_year : To input the list of leap years.
+
+sanitize : Filters obj1 from obj2
+
+size_check : Allows a comparison of size expected.
+
+Range_check : Allows the comparison of range expected.
+
+Usage : Shows the usage message to show how to use the program.
