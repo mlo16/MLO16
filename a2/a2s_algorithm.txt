@@ -1,0 +1,16 @@
+Assignment 2 algorithm Checkpoint 1 Option A - Mitchell Lo
+Seneca ID: mlo16
+Student Number: 111021192
+
+
+
+Functions of the program:
+
+addUser(username) - Using the command sudo useradd in the function to add a user account and accept the username as an argument. Also catches error to see if the the command is                       provided  with a username. Put the user account name into a variable and print it to the output.
+
+findUser(username) - Use the command : 'sudo grep username /etc/passwd' and add the output into a variable. Create a if statement to check if the output has an error or not, using                      'echo $?'. If there is an error, the output would be more than 0, if there is no error, the output would be 0. For each output, print an output to say if the                      user exists or not.
+
+listUser(username) - Use the command 'sudo grep .*bash$ < listUser.txt' and store it into a variable. Print the variable and create a list. Use another variable to store the                            output of the command 'wc -l listUser.txt'. Using the count of lines, display the users on each line according to the number of lines. Use                                          f.readline().split(':') then assign it to a list format and put it into a temporary list. Assign the temporary list[0] to another list and print it to the                          output.
+
+listSysUser(username) - Use the command 'sudo grep -v .*bash$ /etc/passwd < listSysUser.txt' and store it into a variable. Print the variable and create a list. Use another                               variable to store the output of the command 'wc -l listSysUser.txt'. Using the count of lines, display the users on each line according to the number of                           lines. Use f.readline().split(':') then assign it to a list format and put it into a temporary list. Assign the temporary list[0] to another list and print                         it to the output.
+                     
