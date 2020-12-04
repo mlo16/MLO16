@@ -1,7 +1,7 @@
 from fabric.api import *
 '''
 OPS435 Assignment 2S - Fall 2020
-Program: a2r_mlo16.py
+Program: a2s_mlo16.py
 Author: Mitchell Lo
 The python code in this file a2s_mlo16.py is original work written by
 Mitchell Lo. No code in this file is copied from any other source
@@ -28,31 +28,31 @@ def listUser():
     '''return a list of shell user on a remote system'''
     command = 'awk -F: \'/bash$/{print $1}\' /etc/passwd'
     status = run(command)
-    l1 = []
+    list1 = []
     for i in status:
-        l1.append(i)
-    s = ''.join(l1)
-    l2 = s.split()
-    print(l2)
+        list1.append(i)
+    s = ''.join(list1)
+    list2 = s.split()
+    print(list2)
 
 
 def listSysUser():
     '''return a list of system (non-shell) user'''
     command = 'awk -F: \'$7 !~ /bash$/{print $1}\' /etc/passwd'
     status = run(command)
-    l1 = []
+    list1 = []
     for i in status:
-        l1.append(i)
-    s = ''.join(l1)
-    l2 = s.split()
-    print(l2)
+        list1.append(i)
+    s = ''.join(list1)
+    list2 = s.split()
+    print(list2)
 
 
-def findUser(name):
+def findUser(username):
     '''find user with a given user name'''
-    command = 'getent passwd ' + name
+    command = 'getent passwd ' + username
     try:
         status = run(command)
-        print('Found user '+ name + ' on the system.')
+        print('Found user '+ username + ' on the system.')
     except:
-        print('User ' + name + ' is not on the system.')
+        print('User ' + username + ' is not on the system.')
